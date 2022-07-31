@@ -1,0 +1,359 @@
+link: https://www.tutorialstonight.com/number-pattern-programs-in-javascript.php
+
+1. Triangle pattern (1)
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+The pattern shown above is a triangle-shaped pattern using numbers. To create the above pattern run 2 nested loops, internal loop will take care of rows (number of iterations and printing pattern) while the external loop will look for a column mechanism.
+
+Run external loop for 'n' number of times from 1 to 'n', where 'n' is height of triangle, i.e for(let i = 0;i <= n; i++).
+
+The internal loop will run for 1 time in the first iteration of external code, 2 times in the second iteration, and so on and will add the iteration number of the internal loop to the string.
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += j;
+  }
+  string += "\n";
+}
+console.log(string);
+------------------------------------------------------------------
+
+2. Triangle pattern (2)
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+This pattern is similar to the previous pattern, the only difference is in characters. You can see in this pattern characters are the same within a row and only changing in the next iteration of the external loop. So you can simply use 'i' while creating characters instead of 'j' because the value of i stays the same within a row.
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += i;
+  }
+  string += "\n";
+}
+console.log(string);
+...............................................................
+3. Triangle pattern (3)
+1
+2 3
+4 5 6
+7 8 9 10
+The shape of this pattern is the same as the previous one only difference is in the printed number. The number is increasing in each and every iteration. To achieve this you can simply create a random variable ('count' in the below example) and increase it in every iteration.
+
+let n = 4; // height of pattern
+let string = "";
+let count = 1;
+// External loop
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += count;
+    count++;
+  }
+..................................................................
+
+4. Reverse triangle (1)
+12345
+1234
+123
+12
+1
+In this pattern control, internal loop such as it runs for 'n' times in the 1st iteration of the external loop, 'n - 1' times in the 2nd iteration, and so on. To get this set initialization variable j less than 'n - i + 1'. Now use the initialization variable of the internal loop for character increment.
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i + 1; j++) {
+    string += j;
+  }
+  string += "\n";
+}
+console.log(string);
+....................................................................
+5. Reverse triangle (2)
+54321
+5432
+543
+54
+5
+This pattern is the same as the previous pattern only difference is that instead of starting the number from 1 it is starting from 'n', where 'n' is the height of the pattern.
+
+To achieve this use 'n - j + 1' for number creation.
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i + 1; j++) {
+    string += n - j + 1;
+  }
+  string += "\n";
+}
+console.log(string);
+.....................................................
+Pattern 6:
+54321
+4321
+321
+21
+1
+This pattern is the same as the previous pattern only difference is the last pattern starts from number 1 but this pattern ends with number 1 in each row.
+
+To achieve this use 'n - i - j + 2' for printing number as it will end each row with 1.
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i + 1; j++) {
+    string += n - j - i + 2;
+  }
+  string += "\n";
+}
+console.log(string);
+.......................................................
+JavaScript
+▶ Try ItRun Here
+7. Number pyramid pattern (1)
+    1
+   123
+  12345
+ 1234567
+123456789
+This is a pyramid-shaped pattern using the numbers, we have already created the pyramid pattern using stars. Using the same technique create the pattern and instead of printing stars, print numbers starting from 1 in each row.
+
+This program will contain 2 internal loops, 1st internal loop will print the spaces and 2nd internal loop will print numbers starting from 1 and 2 * i -1 times in each row.
+
+let n = 5;
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // creating spaces
+  for (let j = 1; j <= n - i; j++) {
+    string += " ";
+  }
+  // creating numbers
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+console.log(string);
+.....................................................
+8. Number Pyramid Pattern (2)
+  1
+ 234
+56789
+This pattern is the same as the previous pattern only difference is that the number increases in this pattern in each and every iteration, while in the last pattern it starts with 1 again from each row.
+
+To keep track of this create a variable (called count here) and increase it in every iteration of the internal loop and use this variable as a number for printing.
+
+Example
+let n = 3;
+let count = 1;
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // creating spaces
+  for (let j = 1; j <= n - i; j++) {
+    string += " ";
+  }
+  // creating numbers
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    string += count;
+    count++;
+  }
+  string += "\n";
+}
+console.log(string);
+...................................................
+9. Reverse Pyramid Pattern
+123456789
+ 1234567
+  12345
+   123
+    1
+This is a reverse pyramid pattern using numbers. To create this control the formation of spaces and creation of numbers in reverse order. See the code below to understand.
+
+Compare codes of pyramid pattern and reverse pyramid pattern for better understanding.
+
+let n = 5;
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // creating spaces
+  for (let j = 1; j < i; j++) {
+    string += " ";
+  }
+  // creating numbers
+  for (let k = 1; k <= 2 * (n - i + 1) - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+console.log(string);
+.......................................................
+10. Number Diamond Pattern
+    1
+   123
+  12345
+ 1234567
+123456789
+ 1234567
+  12345
+   123
+    1
+The diamond pattern is a combination of the pyramid and the reverse pyramid number patterns.
+let n = 5;
+let string = "";
+// Pyramid
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j < n - i + 1; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+// Reverse Pyramid
+for (let i = 1; i <= n - 1; i++) {
+  for (let j = 1; j < i + 1; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2 * (n - i) - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+console.log(string);
+...............................................................
+Pattern 11: Hourglass Pattern
+123456789
+ 1234567
+  12345
+   123
+    1
+   123
+  12345
+ 1234567
+123456789
+Hourglass pattern is a combination of the reverse pyramid and pyramid number patterns.
+
+let n = 5;
+let string = "";
+// Reverse Pyramid
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j < i; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2 * (n - i + 1) - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+// Pyramid
+for (let i = 1; i <= n - 1; i++) {
+  for (let j = 1; j < n - i; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2 * (i + 1) - 1; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+console.log(string);
+..................................................................
+12. Number Pascal Pattern
+1
+12
+123
+1234
+12345
+1234
+123
+12
+1
+Pascal pattern is a combination of triangle and reverse triangle pattern using numbers.
+
+let n = 5;
+let string = "";
+// Pyramid
+for (let i = 1; i <= n; i++) {
+  for (let k = 1; k <= i; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+// Reverse Pyramid
+for (let i = 1; i <= n - 1; i++) {
+  for (let k = 1; k <= n - i; k++) {
+    string += k;
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

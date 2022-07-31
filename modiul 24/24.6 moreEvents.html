@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h2>More Events</h2>
+<section>
+    <h3 id="text">Very very secrec information is going to be happend.</h3>
+    <input id="deleteConfirm" type="text" placeholder="Please type 'Delete' ">
+    <button id="delBtn" disabled > Delete</button>
+</section>
+
+
+
+<script>
+    const dltBtn = document.getElementById('delBtn');
+    
+    dltBtn.addEventListener('click', function(){
+
+        const text = document.getElementById('text');
+        text.style.display = 'none';    
+    })
+   
+    const deleteConfirm = document.getElementById('deleteConfirm');
+    deleteConfirm.addEventListener('keyup', function(even){
+        
+        if(even.target.value == 'delete'){
+            dltBtn.removeAttribute('disabled')
+        }else{
+            dltBtn.setAttribute('disabled', true)
+        };
+    })
+     //Focus
+    // const deleteConfirm = document.getElementById('deleteConfirm');
+    // deleteConfirm.addEventListener('focus', function(){
+    //     document.body.style.background = 'red';
+    // })
+
+    //Blur
+    // const deleteConfirm = document.getElementById('deleteConfirm');
+    // deleteConfirm.addEventListener('blur', function(){
+    //     document.body.style.background = 'yellow';
+    // })
+    
+    //keyup, keydown, hover, ect event niye aloconea kora hoeche
+    
+</script>
+</body>
+</html>
