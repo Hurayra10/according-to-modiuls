@@ -1,3 +1,4 @@
+//genarate a 4 digit code
 function getPin(){
     const pin = Math.round(Math.random() * 10000);
     const pinString = pin + '';
@@ -7,7 +8,7 @@ function getPin(){
         return getPin();
     }
 }
-
+//calling the generator pin from here//
 function generatePin(){
     const pin = getPin();
     document.getElementById('display-pin').value = pin;
@@ -29,6 +30,7 @@ document.getElementById('key-pad').addEventListener('click', function(event){
    
 });
 
+//working here with submit button
 function varifyPin(){
    const pin = document.getElementById('display-pin').value;
    const typeNumbers = document.getElementById('type-numbers-display').value;
@@ -50,15 +52,7 @@ function varifyPin(){
 
 
 
-// document.getElementById('generate-btn').addEventListener('click', function(){
-  
-//     const generateForm = document.getElementById('genarate-form');
-//     const generateFormText = generateForm.value;
-//     const generatePin = Math.round(Math.random()*10000);
-//     console.log(generatePin);
-//     generateForm.value = generatePin;
-    
-// })
+
 
 
 
