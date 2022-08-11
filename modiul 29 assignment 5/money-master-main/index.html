@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <!-- header section start -->
+       <header>
+        <h1 class="main-title" >Money Master</h1>
+       </header>
+          
+         <!-- main section start here  -->
+       <div class="main-div">
+        <div class="left-div">
+            <img src="cal pic.png" alt="">
+        </div>
+        
+        <div class="right-div">
+           <h2>Income</h2>
+           <p> Income: <input type="text" id="income-field"></p>
+           <h2>Expenses</h2>
+           <p> Food: <input id="food-field"type="text"></p>
+           <p> Rent: <input id="rent-field"type="text"></p>
+           <p> Clothes: <input id="clothes-field" type="text"></p>
+
+           <button id="calculate-btn">Calculate</button>
+           <h2>Total Expence: <span id="total-field"></span></h2>
+
+           <h2>Balance: <span id="balance-field"></span></h2>
+           <p>Save: <button>20</button> % <button id="save-btn">save</button></p>
+           <h2>Saving Amount: <span id="saving-field"></span></h2>
+           <h2>Remaining Balance: <span id="remaining-field"></span></h2>
+        </div>
+       </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -59,7 +59,7 @@ const commonFun = (product, price) => {
 applyBtn.addEventListener("click", function (e) {
     
     const inputFieldText = inputField.value
-    if (inputFieldText === "abc") {
+    if (inputFieldText === "hurayra") {
      
         const finalPriceAfterPro= Number(firstTotalPrice.innerText) * .8;
         finalPrice.innerText=finalPriceAfterPro.toFixed(2)
