@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [50, 41, 5, 46, 2, 80, 49, 20, 40, 10];
+        const result = numbers.find(num => num > 40)
+        console.log(result);
+
+ //তুমি দুইটা প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে। সেই ফাংশনের ভিতরে কাজ হবে। প্রত্যেকটা ইনপুট প্যারামিটার এর সাথে ২ যোগ করবে তারপর যোগফল দুইটা গুণ করবে। ক্যামনে করবে সেটা চিন্তা করে বের করার চেষ্টা করো 
+        const nums = [1,2,3, 46, 2, 80, 49, 20, 40, ];
+        const output = nums.map((a, b) => {
+            const add2 = (a+b);
+            const multiple = add2 * 2;
+            return multiple;
+        })
+        console.log(output);
+
+//অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো 
+const numbers3 = [50, 41, 5, 46, 2, 80, 49, 20, 40, 10];
+        const result3 = numbers3.filter(a => a % 2)
+        console.log(result3);
+    </script>
+    </body>
+</html>
